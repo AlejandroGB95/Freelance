@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradingLab | Academia de Videos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00ff88;
+            --bg: #0f172a;
+            --card: #1e293b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navegación */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 10%;
+            background: rgba(15, 23, 42, 0.9);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: bold; }
+        nav a:hover { color: var(--primary); }
+
+        .container { padding: 50px 10%; text-align: center; }
+        
+        .intro-section { margin-bottom: 50px; }
+        .intro-section h1 { color: var(--primary); font-size: 2.5rem; }
+
+        /* Grid de Videos */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .v-card {
+            background: var(--card);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.3s;
+        }
+
+        .v-card:hover { transform: translateY(-5px); }
+
+        /* Contenedor para que el video sea responsivo */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Ratio 16:9 */
+            height: 0;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .v-info { padding: 20px; text-align: left; }
+        .v-info h3 { margin: 0 0 10px 0; color: var(--primary); }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary);">TRADINGLAB</div>
+    <div>
+        <a href="index.html">Inicio</a>
+        <a href="trading.html">Trading</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="intro-section">
+        <h1>Nuestros Tutoriales</h1>
+        <p>Aprende las mejores estrategias con nuestro contenido visual exclusivo.</p>
+    </div>
+
+        <div class="video-grid">
+            <div class="v-card">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/Z-11MBl5zkA" 
+                        title="Estrategia de Trading" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div><h4>Estrategia Principal</h4><p>Análisis profundo del mercado y operativa.</p></div>
+            </div>
+
+            <div class="v-card">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/HBb9Vn_0skg" 
+                        title="Gestión de Riesgo" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div><h4>Gestión de Riesgo</h4><p>Cómo proteger tu capital en cada operación.</p></div>
+            </div>
+
+            <div class="v-card">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/Rkp75xFGRQY" 
+                        title="Análisis Técnico" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div><h4>Análisis Técnico</h4><p>Lectura de velas y estructuras de mercado.</p></div>
+            </div>
+
+            <div class="v-card">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/UbJBfb3OrDE" 
+                        title="Psicología" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div><h4>Psicotrading</h4><p>Domina tu mente antes de dominar el mercado.</p></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
