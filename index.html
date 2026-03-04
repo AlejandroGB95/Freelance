@@ -109,6 +109,36 @@
         }
         .form-container button:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4); }
 
+        /* Ajuste para móviles: Invertir orden y centrar */
+        @media (max-width: 768px) {
+            #trading {
+                flex-direction: column-reverse; /* ESTA ES LA MAGIA: Formulario arriba, Video abajo */
+                padding: 40px 5%;
+                gap: 30px;
+            }
+            
+            .video-container, .form-container {
+                width: 100%; /* Asegura que ocupen todo el ancho en móvil */
+            }
+
+            .grid-conocenos {
+                grid-template-columns: 1fr; /* Una sola columna en móvil para las tarjetas */
+            }
+
+            h1 { font-size: 2.5rem; } /* Título un poco más pequeño en móvil */
+        }
+
+        .video-container { flex: 2; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); }
+        .video-container iframe { width: 100%; aspect-ratio: 16/9; border: none; display: block; }
+
+        .form-container {
+            flex: 1;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
         .card:hover {
             border-color: var(--primary);
             transform: translateY(-10px);
