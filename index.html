@@ -32,12 +32,12 @@
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
-        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
+        .logo { font-size: 1.8rem; font-weight: 800; color: var(--primary); }
         .nav-links { list-style: none; display: flex; }
         .nav-links li { margin-left: 30px; }
         .nav-links a { 
-            text-decoration: none; color: white; font-weight: 500; 
-            transition: 0.3s; padding: 8px 15px; border-radius: 5px;
+            text-decoration: none; color: white; font-weight: 800; 
+            transition: 0.3s; padding: 8px 15px; border-radius: 5px; font-size: 1.2rem;
         }
         .nav-links a:hover { background: var(--primary); color: #000; }
 
@@ -126,6 +126,10 @@
             }
 
             h1 { font-size: 2.5rem; } /* Título un poco más pequeño en móvil */
+
+            .nav-links a { 
+            text-decoration: none; color: white; font-weight: 800; 
+            transition: 0.3s; padding: 8px 15px; border-radius: 5px; font-size: 1.2rem;}
         }
 
         .video-container { flex: 2; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); }
@@ -252,7 +256,7 @@ h1 {
         <ul class="nav-links">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="trading.html">Cursos</a></li>
-            <li><a href="#conocenos">Conócenos</a></li>
+             <!-- <li><a href="#conocenos">Conócenos</a></li> -->
             <li><a href="recursos.html">Recursos</a></li>
         </ul>
     </nav>
@@ -519,7 +523,7 @@ h1 {
     }
 
     .logo {
-        font-size: 1.1rem; /* Logo más pequeño */
+        font-size: 1.3rem; /* Logo más pequeño */
     }
 
     .nav-links li {
@@ -528,7 +532,7 @@ h1 {
 
     .nav-links a {
         padding: 5px 8px; /* Botones más compactos */
-        font-size: 0.75rem; /* Letra más pequeña para que quepan todos en una fila */
+        font-size: 1rem; /* Letra más pequeña para que quepan todos en una fila */
     }
 
     /* Reducimos también el margen del ticker tape para que no quede un hueco blanco grande */
@@ -559,4 +563,5 @@ h1 {
     <i class="fab fa-whatsapp"></i>
 </a>
 </body>
+
 </html>
