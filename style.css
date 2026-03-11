@@ -1,0 +1,300 @@
+ :root {
+            --primary: #00ff88; /* Verde Neón Trading */
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-light: #f8fafc;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-light); scroll-behavior: smooth; }
+
+        /* --- NAVEGACIÓN --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: rgba(15, 23, 42, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .logo { font-size: 1.8rem; font-weight: 800; color: var(--primary); }
+        .nav-links { list-style: none; display: flex; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a { 
+            text-decoration: none; color: white; font-weight: 800; 
+            transition: 0.3s; padding: 8px 15px; border-radius: 5px; font-size: 1.2rem;
+        }
+        .nav-links a:hover { background: var(--primary); color: #000; }
+
+        /* --- SECCIÓN HERO / INICIO --- */
+        #inicio {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+        h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .highlight { color: var(--primary); }
+
+        /* --- SECCIÓN CONÓCENOS --- */
+        #conocenos { padding: 80px 10%; }
+        .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+        .grid-conocenos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* --- SECCIÓN TRADING (VIDEO + FORM) --- */
+        #trading {
+            padding: 80px 10%;
+            background: #111b2d;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        .video-container { flex: 2; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); }
+        .video-container iframe { width: 100%; height: 400px; border: none; }
+
+        .form-container {
+            flex: 1;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: none;
+            background: #0f172a;
+            color: white;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary);
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .form-container button:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4); }
+
+        /* Ajuste para móviles: Invertir orden y centrar */
+        @media (max-width: 768px) {
+            #trading {
+                flex-direction: column-reverse; /* ESTA ES LA MAGIA: Formulario arriba, Video abajo */
+                padding: 40px 5%;
+                gap: 30px;
+            }
+            
+            .video-container, .form-container {
+                width: 100%; /* Asegura que ocupen todo el ancho en móvil */
+            }
+
+            .grid-conocenos {
+                grid-template-columns: 1fr; /* Una sola columna en móvil para las tarjetas */
+            }
+
+            h1 { font-size: 2.5rem; } /* Título un poco más pequeño en móvil */
+
+            .nav-links a { 
+            text-decoration: none; color: white; font-weight: 800; 
+            transition: 0.3s; padding: 8px 15px; border-radius: 5px; font-size: 1.2rem;}
+        }
+
+        .video-container { flex: 2; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); }
+        .video-container iframe { width: 100%; aspect-ratio: 16/9; border: none; display: block; }
+
+        .form-container {
+            flex: 1;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+            transform: translateY(-10px);
+        }
+        .card:hover h3 { color: var(--primary); transition: 0.3s; }
+        .card h3 { margin-bottom: 20px; font-size: 1.5rem; }
+        .card p { font-size: 0.95rem; line-height: 1.7; color: #94a3b8; }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 50px 10%;
+            text-align: center;
+            background: #080e1a;
+        }
+        .social-icons { margin-bottom: 20px; }
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+
+      /* --- SECCIÓN HERO / INICIO --- */
+#inicio {
+    min-height: 100vh; /* Permite que la sección crezca si el contenido es grande */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 10% 80px; /* Aumentamos el padding inferior para que no se corte */
+}
+
+h1 { 
+    font-size: clamp(2.5rem, 8vw, 4rem); /* Tamaño fluido para que no rompa en móviles */
+    margin-bottom: 1rem; 
+    line-height: 1.1; 
+}
+
+/* Contenedor de la imagen corregido */
+.hero-img-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto 0; /* Centrado con margen arriba */
+    border-radius: 20px;
+    overflow: hidden; 
+    box-shadow: 0 0 50px rgba(0, 255, 136, 0.2);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    background-color: #000;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción real sin estirar */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.hero-img-container:hover .hero-img {
+    transform: scale(1.05);
+}
+        .social-icons a:hover { color: var(--primary); }
+
+        .roadmap-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 50px;
+}
+.roadmap-step {
+    text-align: center;
+    flex: 1;
+    position: relative;
+    padding: 20px;
+}
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    margin: 0 auto 15px;
+    box-shadow: 0 0 15px var(--primary);
+}
+.roadmap-step::after {
+    content: '';
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: rgba(0, 255, 136, 0.2);
+    z-index: -1;
+}
+.roadmap-step:last-child::after { display: none; }
+
+@media (max-width: 768px) {
+    .roadmap-container { flex-direction: column; gap: 30px; }
+    .roadmap-step::after { display: none; }
+}
+
+/* pantalla mas pequeña en movil */
+    .cookie-overlay {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: var(--card-bg);
+        border-left: 5px solid var(--primary); /* Una línea verde elegante a la izquierda */
+        border-radius: 10px;
+        padding: 20px;
+        z-index: 9999;
+        display: none;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+        max-width: 350px; /* Un poco más estrecho para que sea discreto */
+    }
+    .cookie-content h3 { margin-bottom: 10px; color: white; }
+    .cookie-content p { font-size: 0.85rem; color: #94a3b8; margin-bottom: 20px; }
+    .cookie-btn {
+        background: var(--primary);
+        color: #000;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        width: 100%;
+        transition: 0.3s;
+    }
+    .cookie-btn:hover { transform: scale(1.02); background: #fff; }
+
+    /* Para que se vea bien en móviles */
+    @media (max-width: 768px) {
+        .cookie-overlay { left: 10px; right: 10px; bottom: 10px; }
+    }
+
+    /* --- Ajustes específicos para que la navegación quepa en móvil --- */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 3%; /* Menos espacio arriba y a los lados */
+    }
+
+    .logo {
+        font-size: 1.3rem; /* Logo más pequeño */
+    }
+
+    .nav-links li {
+        margin-left: 10px; /* Menos separación entre los botones */
+    }
+
+    .nav-links a {
+        padding: 5px 8px; /* Botones más compactos */
+        font-size: 1rem; /* Letra más pequeña para que quepan todos en una fila */
+    }
+
+    /* Reducimos también el margen del ticker tape para que no quede un hueco blanco grande */
+    div[style*="margin-top: 70px"] {
+        margin-top: 55px !important; 
+    }
+
+    /* ... aquí puedes dejar el resto de código de #trading y grid que ya tenías ... */
+}

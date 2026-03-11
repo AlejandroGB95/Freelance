@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradingLab Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <div class="logo">TRADING<span style="color:white">LAB</span></div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="Cursos/trading.html">Cursos</a></li>
+             <!-- <li><a href="#conocenos">Conócenos</a></li> -->
+            <li><a href="Recursos/recursos.html">Recursos</a></li>
+        </ul>
+    </nav>
+    <div style="height: 40px; background: #0f172a; border-bottom: 1px solid rgba(255,255,255,0.1); margin-top: 70px;">
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+      "symbols": [
+        {"proName": "FOREXCOM:SPX500", "title": "S&P 500"},
+        {"proName": "FOREXCOM:NSXUSD", "title": "Nasdaq 100"},
+        {"proName": "FX_IDC:EURUSD", "title": "EUR/USD"},
+        {"proName": "BITSTAMP:BTCUSD", "title": "BTC/USD"},
+        {"proName": "BITSTAMP:ETHUSD", "title": "ETH/USD"}
+      ],
+      "showSymbolLogo": true,
+      "colorTheme": "dark",
+      "isTransparent": false,
+      "displayMode": "adaptive",
+      "locale": "es"
+    }
+    </script>
+</div>
+
+    <section id="inicio">
+        <h1>Domina el <span class="highlight">Mercado</span></h1>
+        <p>Aprende las estrategias que usan los profesionales.</p>
+        <div class="hero-img-container">
+           <img src="Imagenes/terminal_elite.jpg" alt="Trading Terminal Elite" class="hero-img">
+        </div>
+
+    </section>
+    <section id="mercados" style="padding: 40px 10%; background: #0b1120;">
+    <div style="text-align: center; margin-bottom: 30px;">
+        <h2 style="font-size: 1.5rem; color: var(--primary);"><i class="fas fa-chart-line"></i> Mercados en Tiempo Real</h2>
+    </div>
+    
+    <div class="tradingview-widget-container" style="border-radius: 15px; overflow: hidden; border: 1px solid rgba(0, 255, 136, 0.2); box-shadow: var(--shadow);">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+        {
+          "colorTheme": "dark",
+          "dateRange": "12M",
+          "showChart": true,
+          "locale": "es",
+          "width": "100%",
+          "height": "450",
+          "largeChartUrl": "",
+          "isTransparent": false,
+          "showSymbolLogo": true,
+          "showFloatingTooltip": false,
+          "tabs": [
+            {
+              "title": "Índices",
+              "symbols": [
+                { "s": "FOREXCOM:SPX500", "d": "S&P 500" },
+                { "s": "FOREXCOM:NSXUSD", "d": "Nasdaq 100" },
+                { "s": "FOREXCOM:DJI", "d": "Dow 30" },
+                { "s": "INDEX:BTCUSD", "d": "Bitcoin" }
+              ]
+            },
+            {
+              "title": "Forex",
+              "symbols": [
+                { "s": "FX:EURUSD" },
+                { "s": "FX:GBPUSD" },
+                { "s": "FX:USDJPY" },
+                { "s": "FX:AUDUSD" }
+              ]
+            }
+          ]
+        }
+        </script>
+    </div>
+</section>
+
+<section id="heatmap" style="padding: 40px 10%; background: #0f172a;">
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h3 style="color: var(--primary); font-size: 1.2rem;">Mapa de Calor del Mercado</h3>
+    </div>
+    <div class="tradingview-widget-container" style="border-radius: 15px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-crypto-coins-heatmap.js" async>
+        {
+          "dataSource": "AllCrypto",
+          "symbolPageUrl": "",
+          "colorTheme": "dark",
+          "hasTopBar": false,
+          "isTransparent": false,
+          "hasSymbolLogo": true,
+          "width": "100%",
+          "height": "400"
+        }
+        </script>
+    </div>
+</section>
+
+<section style="padding: 60px 10%; background: #111b2d; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
+    <div>
+        <i class="fas fa-bolt" style="color: var(--primary); font-size: 2.5rem; margin-bottom: 15px;"></i>
+        <h4 style="margin-bottom: 10px;">Señales en Vivo</h4>
+        <p style="font-size: 0.85rem; color: #94a3b8;">Análisis de entradas y salidas en tiempo real.</p>
+    </div>
+    <div>
+        <i class="fas fa-shield-alt" style="color: var(--primary); font-size: 2.5rem; margin-bottom: 15px;"></i>
+        <h4 style="margin-bottom: 10px;">Gestión de Riesgo</h4>
+        <p style="font-size: 0.85rem; color: #94a3b8;">Protege tu capital con algoritmos avanzados.</p>
+    </div>
+    <div>
+        <i class="fas fa-graduation-cap" style="color: var(--primary); font-size: 2.5rem; margin-bottom: 15px;"></i>
+        <h4 style="margin-bottom: 10px;">Mentoría 1 a 1</h4>
+        <p style="font-size: 0.85rem; color: #94a3b8;">Aprende directamente de traders institucionales.</p>
+    </div>
+    <div>
+        <i class="fas fa-users" style="color: var(--primary); font-size: 2.5rem; margin-bottom: 15px;"></i>
+        <h4 style="margin-bottom: 10px;">Comunidad VIP</h4>
+        <p style="font-size: 0.85rem; color: #94a3b8;">Acceso exclusivo a nuestro grupo de Discord.</p>
+    </div>
+</section>
+
+    <section id="conocenos">
+        <h2 class="section-title">Nuestra Metodología</h2>
+        <div class="grid-conocenos">
+            <div class="card">
+                <h3>¿Quiénes Somos?</h3>
+                <p>Somos un ecosistema de formación financiera compuesto por traders institucionales y analistas de mercado con más de 10 años de trayectoria real en los mercados internacionales. No solo operamos activos; entendemos la narrativa detrás del precio.
+
+                Nuestra especialización radica en la convergencia del Análisis Técnico Avanzado y la arquitectura del Psicotrading, proporcionando a nuestros alumnos las herramientas psicológicas necesarias para gestionar el riesgo y la incertidumbre en entornos de alta volatilidad. Nuestra misión es transformar la complejidad de las gráficas en una ventaja competitiva sostenible.</p>
+            </div>
+            <div class="card">
+                <h3>El Proceso</h3>
+                <p>Nuestra Metodología: "The Trader's Roadmap"
+
+                    Creemos que la teoría sin ejecución es solo ruido. Por ello, nuestro proceso de enseñanza se divide en tres fases críticas de alto rendimiento:
+
+                    Fundamentos de Precisión: Inmersión total en la estructura del mercado, volumen y acción del precio (Price Action).
+
+                    Gestión de Capital Dinámica: Implementación de modelos matemáticos de riesgo para asegurar la preservación del patrimonio a largo plazo.
+
+                    Entrenamiento en Entorno Real: Sesiones de mentoría donde analizamos el mercado en vivo, aplicando estrategias de oferta y demanda en tiempo real.
+
+                    No enseñamos a adivinar; enseñamos a reaccionar con disciplina ante las probabilidades.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 80px 10%; background: #0f172a;">
+    <div style="text-align: center; margin-bottom: 50px;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 10px;">TU RUTA AL <span style="color: var(--primary);">ÉXITO</span></h2>
+        <p style="color: #94a3b8;">Del desconocimiento total a gestionar capital institucional.</p>
+    </div>
+
+    <div class="roadmap-container">
+        <div class="roadmap-step">
+            <div class="step-number">01</div>
+            <h4 style="color: var(--primary);">Fundamentos</h4>
+            <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 10px;">Entiende el lenguaje del mercado y el análisis técnico base.</p>
+        </div>
+        <div class="roadmap-step">
+            <div class="step-number">02</div>
+            <h4 style="color: var(--primary);">Estrategia</h4>
+            <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 10px;">Domina nuestro sistema de alta probabilidad con reglas claras.</p>
+        </div>
+        <div class="roadmap-step">
+            <div class="step-number">03</div>
+            <h4 style="color: var(--primary);">Psicología</h4>
+            <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 10px;">Entrena tu mente para ejecutar sin miedo y con disciplina.</p>
+        </div>
+        <div class="roadmap-step">
+            <div class="step-number">04</div>
+            <h4 style="color: var(--primary);">Fondeo</h4>
+            <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 10px;">Supera las pruebas de fondeo y gestiona capital de terceros.</p>
+        </div>
+    </div>
+</section>
+
+    <section id="trading">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/P3AIFPLKO5w?si=NFJK7uIKpplyopya" title="YouTube video player" allowfullscreen></iframe>
+        </div>
+
+        <div class="form-container">
+            <h3>Contáctanos</h3>
+            <p style="margin-bottom: 15px; font-size: 0.9rem;">Escríbenos para recibir más información.</p>
+            <form action="https://formspree.io/f/TU_ID" method="POST">
+                <input type="text" name="name" placeholder="Tu Nombre" required>
+                <input type="email" name="email" placeholder="Tu Email" required>
+                <textarea name="message" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
+                
+                <label style="font-size: 0.75rem; color: #94a3b8; display: flex; align-items: flex-start; gap: 10px; margin-bottom: 15px; cursor: pointer;">
+                    <input type="checkbox" required style="width: auto; margin-top: 3px;">
+                    <span>Acepto que mis datos sean tratados para recibir la información solicitada según la Política de Privacidad.</span>
+                </label>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <a href="Legal/legal.html" style="color: #64748b; text-decoration: none; font-size: 0.8rem; margin: 0 10px;">Aviso Legal</a>
+            <a href="Legal/legal.html" style="color: #64748b; text-decoration: none; font-size: 0.8rem; margin: 0 10px;">Política de Privacidad</a>
+            <a href="Legal/legal.html" style="color: #64748b; text-decoration: none; font-size: 0.8rem; margin: 0 10px;">Política de Cookies</a>
+        </div>
+        <div class="risk-disclaimer" style="padding: 20px 10%; background: #050a14; color: #64748b; font-size: 0.8rem; text-align: justify; border-top: 1px solid rgba(255,255,255,0.05);">
+            <p><strong>Advertencia de Riesgo:</strong> El trading de activos financieros conlleva un alto nivel de riesgo y puede no ser adecuado para todos los inversores. El alto grado de apalancamiento puede trabajar tanto a su favor como en su contra. Antes de decidir invertir, debe considerar cuidadosamente sus objetivos de inversión, nivel de experiencia y apetito de riesgo. Existe la posibilidad de que sufra una pérdida de parte o de la totalidad de su inversión inicial. <strong>TradingLab Academy</strong> no es un asesor financiero ni gestiona capital de terceros. El contenido de esta web es estrictamente educativo y no constituye una recomendación de inversión.</p>
+        </div>
+        <br>
+        <p>&copy; 2026 TradingLab Academy. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="cookie-banner" class="cookie-overlay">
+        <div class="cookie-content">
+            <i class="fas fa-cookie-bite" style="color: var(--primary); font-size: 2rem; margin-bottom: 15px;"></i>
+            <h3>Aviso de Cookies</h3>
+            <p>Utilizamos cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico de la academia. Al continuar navegando, aceptas nuestra <a href="legal.html" style="color: var(--primary);">Política de Cookies</a>.</p>
+            <button onclick="acceptCookies()" class="cookie-btn">Aceptar y Continuar</button>
+        </div>
+    </div>
+    <script>
+        function acceptCookies() {
+            // Guarda la decisión en el almacenamiento local del navegador
+            localStorage.setItem('cookiesAceptadas', 'true');
+            // Oculta el banner
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+
+        // Al cargar la página, comprueba si ya las aceptó anteriormente
+        window.onload = function() {
+            if (!localStorage.getItem('cookiesAceptadas')) {
+                document.getElementById('cookie-banner').style.display = 'block';
+            }
+        }
+    </script>
+    <a href="https://wa.me/TUNUMERO" target="_blank" style="position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; transition: 0.3s;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>

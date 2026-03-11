@@ -1,0 +1,132 @@
+:root {
+            --primary: #00ff88;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-light: #f8fafc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: var(--bg-dark); 
+            color: var(--text-light); 
+            padding-top: 100px; /* Espacio para que la nav no tape el h1 */
+        }
+
+        /* --- NAVEGACIÓN PC --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10%;
+            height: 80px;
+            background: rgba(15, 23, 42, 0.98);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2000;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        .logo { 
+            font-size: 1.5rem; 
+            font-weight: 800; 
+            color: var(--primary); 
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-links { 
+            list-style: none; 
+            display: flex; 
+            gap: 20px; /* Espaciado moderno entre elementos */
+            align-items: center;
+        }
+
+        .nav-links a { 
+            text-decoration: none; 
+            color: white; 
+            font-weight: 800; 
+            font-size: 1.2rem; 
+            transition: 0.3s; 
+            padding: 8px 15px; 
+            border-radius: 8px;
+            white-space: nowrap; /* Evita que el texto se corte */
+        }
+
+        .nav-links a:hover { 
+            background: rgba(0, 255, 136, 0.1); 
+            color: var(--primary); 
+        }
+
+        /* --- CONTENIDO --- */
+        .container { padding: 40px 10%; width: 100%; }
+        
+        .header-recursos { text-align: center; margin-bottom: 50px; }
+        .header-recursos h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); margin-bottom: 10px; }
+        .header-recursos p { color: #94a3b8; }
+
+        .grid-recursos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .widget-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .widget-card h3 { margin-bottom: 20px; font-size: 1.1rem; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+
+        /* --- RESPONSIVE MÓVIL --- */
+        @media (max-width: 768px) {
+            nav { padding: 0 5%; height: 70px; }
+            .logo { font-size: 1.1rem; }
+            .nav-links { gap: 5px; }
+            .nav-links a { font-size: 1rem; padding: 5px 8px; }
+            
+            .container { padding: 20px 5%; }
+            .grid-recursos { grid-template-columns: 1fr; }
+        }
+
+        .grid-recursos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px; /* Aumentamos el espacio entre widgets de abajo */
+            margin-top: 20px;
+        }
+
+        .widget-card {
+            transition: transform 0.3s ease;
+        }
+
+        .widget-card:hover {
+            transform: translateY(-5px);
+        }
+
+         /* --- FOOTER --- */
+        footer {
+            padding: 50px 10%;
+            text-align: center;
+            background: #080e1a;
+        }
+        .social-icons { margin-bottom: 20px; }
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+         /* El efecto neón al pasar el ratón por los iconos */
+        .social-icons a:hover {
+            color: var(--primary);
+            text-shadow: 0 0 10px var(--primary);
+            transform: translateY(-3px);
+            display: inline-block;
+            }
